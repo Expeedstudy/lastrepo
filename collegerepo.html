@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample HTML</title>
+</head>
+<body>
+    <h1>Sample HTML</h1>
+    <form id="studentForm">
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" required><br>
+
+        <label for="collegeName">College Name:</label>
+        <input type="text" id="collegeName" required><br>
+
+        <label for="grade">Grade and Division:</label>
+        <input type="text" id="grade" required><br>
+
+        <label for="score">Score (A, A+, B, B+, C, F):</label>
+        <input type="text" id="score" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById("studentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const studentName = document.getElementById("studentName").value;
+            const collegeName = document.getElementById("collegeName").value;
+            const grade = document.getElementById("grade").value;
+            const score = document.getElementById("score").value;
+
+            // Perform any additional validation if required before logging the information
+
+            console.log("Student Name: " + studentName);
+            console.log("College Name: " + collegeName);
+            console.log("Grade and Division: " + grade);
+            console.log("Score: " + score);
+
+            alert("Successfully added Student details");
+        });
+    </script>
+</body>
+</html>
